@@ -16,15 +16,16 @@
         <h1>MOVIES</h1>
         <div class="row">
             <div class="col-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{}}</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                @foreach ($movies as $movie)
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $movie['title'] }}</h5>
+                            <h5>{{ $movie['original-title'] }}</h5>
+                            <p class="card-text">{{ $movie['nationality'] }} - {{ $movie['date'] }}</p>
+                            <h5>{{ $movie['vote'] }}</h5>
+                        </div>
                     </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
