@@ -15,8 +15,8 @@
     <div class="container">
         <h1>MOVIES</h1>
         <div class="row">
-            <div class="col-3">
-                @foreach ($movies as $movie)
+            @foreach ($movies as $movie)
+                <div class="col-5">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">{{ $movie['title'] }}</h5>
@@ -25,8 +25,8 @@
                             <h5>{{ $movie['vote'] }}</h5>
                         </div>
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
         </div>
     </div>
 </body>
